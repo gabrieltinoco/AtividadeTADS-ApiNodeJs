@@ -1,7 +1,7 @@
 const config = {
     user: 'sa',
     password: 'root',
-    server: 'FRANKY\SQLEXPRESS',
+    server: 'localhost\\SQLEXPRESS',
     database: 'ApiProdutosDB',
     options: {
         trustServerCertificate: true
