@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe do Produto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">LOGOTIPO</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="https://via.placeholder.com/600x400.png?text=Produto" class="img-fluid rounded"
+                    alt="Imagem do Produto">
+            </div>
+
+            <div class="col-md-7">
+                <h1 id="detalhe-nome">Nome do Produto...</h1>
+
+                <h5>Descrição</h5>
+                <p id="detalhe-descricao">Carregando descrição...</p>
+
+                <h5 class="mt-4">Informações</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Preço:</strong> R$ <span id="detalhe-preco">...</span></li>
+                    <li class="list-group-item"><strong>Categoria:</strong> <span id="detalhe-categoria">...</span></li>
+                    <li class="list-group-item"><strong>Código:</strong> <span id="detalhe-codigo">...</span></li>
+                    <li class="list-group-item"><strong>Estoque:</strong> <span id="detalhe-estoque">...</span></li>
+                    <li class="list-group-item"><strong>Avaliação:</strong> <span id="detalhe-avaliacao">...</span> /
+                        5.00</li>
+                </ul>
+
+                <div class="mt-4">
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                        Editar Item
+                    </button>
+                    <button class="btn btn-danger" id="btn-excluir">
+                        Excluir Item
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mt-5 p-4 bg-light">
+    </footer>
+
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-editar">
+                        <div class="mb-3">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="edit-nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Preço</label>
+                            <input type="number" step="0.01" class="form-control" id="edit-preco" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Categoria</label>
+                            <input type="text" class="form-control" id="edit-categoria">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Estoque</label>
+                            <input type="number" class="form-control" id="edit-estoque">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Avaliação</label>
+                            <input type="number" step="0.01" class="form-control" id="edit-avaliacao">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Descrição</label>
+                            <textarea class="form-control" id="edit-descricao" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Salvar Alterações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
