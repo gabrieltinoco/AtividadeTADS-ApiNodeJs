@@ -24,33 +24,90 @@
         </div>
     </nav>
 
-    <header class="container my-4">
-        <div class="p-5 mb-4 bg-light rounded-3 text-center">
-            <h1>Nossos Produtos</h1>
-            <p class="lead">Confira os itens mais recentes.</p>
-
-            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAdicionar">
-                + Adicionar Novo Produto
+    <div class="container my-4">
+        <div id="carouselDestaque" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487909667-f7cd75b59d5a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" class="d-block w-100" alt="Destaque 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Seus Produtos</h5>
+                        <p>Qualidade e variedade em um só lugar.</p>
+                    </div>
+                </div>                
+                <div class="carousel-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487985079-b299ac8ba1df?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1057" class="d-block w-100" alt="Destaque 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>As Melhores Ofertas</h5>
+                        <p>Confira os itens mais recentes cadastrados.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://plus.unsplash.com/premium_photo-1677995700941-100976883af7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1223" class="d-block w-100" alt="Destaque 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Contribua com o Catálogo</h5>
+                        <p>
+                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalAdicionar">
+                                + Adicionar Novo Produto
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaque" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaque" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Próximo</span>
             </button>
         </div>
-    </header>
+    </div>
 
     <main class="container">
         <div class="row" id="produtos-grid">
         </div>
     </main>
 
-    <footer class="container mt-5 p-4 bg-light">
+    <section class="container mt-5 py-4 border-top">
+        <h3>Créditos</h3>
         <div class="row">
-            <div class="col-md-6">
+            
+            <div class="col-lg-8">
                 <h5>Sobre</h5>
-                <p>Informações sobre a loja ou o projeto.</p>
+                <p>Este projeto foi desenvolvido como atividade acadêmica. Ele implementa um sistema CRUD (Create, Read, Update, Delete) com um front-end em HTML/Bootstrap/JavaScript e um back-end (API) em Node.js com SQL Server.</p>
+                <p>Os produtos são consumidos da API e exibidos dinamicamente.</p>
             </div>
-            <div class="col-md-6">
+            
+            <div class="col-lg-4">
                 <h5>Autoria</h5>
-                <p>Desenvolvido por: [Seu Nome]</p>
+                <div class="d-flex align-items-center mb-3">
+                    <div>
+                        <strong>Gabriel Lucas Tinoco de Aguiar</strong><br>
+                        Aluno de Engenharia de Software<br>
+                        Código de Pessoa: 1491110
+                    </div>
+                </div>
+                
+                <h5>Redes Sociais</h5>
+                <p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">F</a>
+                    <a href="#" class="btn btn-outline-info btn-sm">T</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm">I</a>
+                </p>
             </div>
         </div>
+    </section>
+
+    <footer class="container mt-4 p-3 bg-light text-center">
+        <p>&copy; 2025 - Atividade de Desenvolvimento Web</p>
     </footer>
 
     <div class="modal fade" id="modalAdicionar" tabindex="-1">

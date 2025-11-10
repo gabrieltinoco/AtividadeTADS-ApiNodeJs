@@ -44,7 +44,7 @@ async function carregarProdutosHome() {
             const card = `
                 <div class="col-md-3 mb-4">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/300x200.png?text=Produto" class="card-img-top" alt="${produto.Nome}">
+                        <img src="https://plus.unsplash.com/premium_photo-1683984171269-04c84ee23234?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074" class="card-img-top" alt="${produto.Nome}">
                         <div class="card-body">
                             <h5 class="card-title">${produto.Nome}</h5>
                             <p class="card-text">R$ ${produto.Preco.toFixed(2)}</p>

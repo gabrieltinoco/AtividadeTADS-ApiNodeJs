@@ -1,0 +1,21 @@
+/* --- Estilos do Carrossel --- */
+.carousel-item img {
+height: 400px;
+object-fit: cover;
+}
+
+/* --- Estilos dos Cards de Produto --- */
+.card-img-top {
+height: 200px;
+object-fit: cover;
+}
+
+.carousel-caption {
+  color: #000; /* Isso define a cor do <p> (parágrafo) */
+}
+
+/* Precisamos ser mais específicos para sobrescrever o H5 do Bootstrap
+*/
+.carousel-caption h5 {
+  color: #000; /* Isso define a cor do <h5> (título) */
+}
